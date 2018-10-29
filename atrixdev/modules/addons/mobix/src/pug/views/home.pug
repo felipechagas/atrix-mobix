@@ -1,0 +1,21 @@
+.container-fluid
+    .row
+        .col-md-12
+            .panel.panel-default
+                .panel-heading Consulta do Cliente
+                .panel-body
+                    .row
+                        .col-lg-7
+                        .col-lg-5
+                            .form-group
+                                .input-group
+                                    input.form-control(type="text" placeholder="ID, Nome, E-mail ou CPF/CNPJ" ng-model="")
+                                    .input-group-btn
+                                        button.btn.btn-default(type="button" ng-click="")
+                                            i.fa.fa-close
+                                        button.btn.btn-primary(type="button" ng-click="")
+                                            i.fa.fa-search
+                                            | &nbsp; Pesquisar
+
+                    
+

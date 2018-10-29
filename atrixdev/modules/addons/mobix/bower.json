@@ -1,0 +1,25 @@
+{
+  "name": "modulo_mobix",
+  "description": "",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "homepage": "https://atrixdev.mobtelecom.com.br/controle/addonmodules.php?module=clientes",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.maskedinput": "^1.4.1",
+    "angular-ui-utils": "~3.0.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "angular": "~1.6.4",
+    "angular-ui-router": "^1.0.4",
+    "angucomplete-alt": "^3.0.0",
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.12",
+    "ng-tags-input": "^3.1.2"
+  }
+}

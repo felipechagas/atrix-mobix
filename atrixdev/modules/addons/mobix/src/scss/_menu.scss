@@ -1,0 +1,53 @@
+/*CSS MENU*/
+
+.content-header {
+    display: none;
+}
+
+.content {
+    padding: 0;
+    margin-left: 0;
+}
+
+.btn-right {
+    margin-left: 5px;
+}
+
+.menu-bar {
+    min-height: 55px;
+}
+
+.logo {
+    color: $cor-logo !important;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-default {
+    background-color: $barra-default;
+    border-color: $barra-default;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: $cor-logo;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus { 
+    border-bottom-color: $borda-bottom-menu;
+    border-bottom-style: solid;
+    background-color: $barra-menu;
+    color: $preto;
+}
+
+.form-cadastro {
+    margin-top: 34px; 
+}

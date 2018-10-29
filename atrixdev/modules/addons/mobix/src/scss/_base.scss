@@ -1,0 +1,30 @@
+/**
+    Style responsavel por formatar o conteudo do addon
+ */
+
+.container-addon {
+    margin: -10px 10px 0px 10px;
+}
+
+.block-resize {
+    padding: 10px;
+    width: 100%;
+    resize: none;
+}
+
+.red {
+    color: $red;
+}
+
+.bug {
+    color: $red;
+    background: $red;
+}
+
+.require {
+    color: $red;
+}
+
+.resize {
+    resize: none;
+}
