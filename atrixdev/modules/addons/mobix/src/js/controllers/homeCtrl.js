@@ -4,9 +4,9 @@
     angular.module("modulo_mobix").controller("homeCtrl", ["CONFIG", function (CONFIG) {
 
         var vm = this;
-        vm.cliente = {};
+        vm.cliente = {}; 
 
-        
+
     }]);
 
 })();
