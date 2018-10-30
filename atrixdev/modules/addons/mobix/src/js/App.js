@@ -34,8 +34,29 @@
                         controllerAs: "vm"
                     }
                 }
-            });
+            })
 
+            .state("listaDePontos", {
+                url: "/listaDePontos",
+                views: {
+                    "conteudo": {
+                        templateUrl: CONFIG.URL_MODULE + "views/listaDePontos.html?v=" + modulo_mobix_version,
+                        controller: "listaDePontosCtrl",
+                        controllerAs: "vm"
+                    }
+                }
+            })
+
+            .state("testeUsuario", {
+                url: "/testeUsuario",
+                views: {
+                    "conteudo": {
+                        templateUrl: CONFIG.URL_MODULE + "views/testeUsuario.html?v=" + modulo_mobix_version,
+                        controller: "testeUsuarioCtrl",
+                        controllerAs: "vm"
+                    }
+                }
+            });
 
     }]);
 
