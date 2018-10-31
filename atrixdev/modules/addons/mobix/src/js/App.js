@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("modulo_mobix", ['ui.mask', "ui.router"]);
+    angular.module("modulo_mobix", ['ui.mask', "ui.router", "ngMaterial", "ngMessages"]);
 
     angular.module("modulo_mobix").constant("CONFIG", {
         URL_MODULE: "../modules/addons/mobix/www/",

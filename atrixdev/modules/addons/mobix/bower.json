@@ -20,6 +20,10 @@
     "angucomplete-alt": "^3.0.0",
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.12",
-    "ng-tags-input": "^3.1.2"
+    "ng-tags-input": "^3.1.2",
+    "angular-material": "^1.1.10"
+  },
+  "resolutions": {
+    "angular": "~1.6.4"
   }
 }

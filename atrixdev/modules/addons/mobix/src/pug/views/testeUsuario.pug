@@ -1,0 +1,150 @@
+.container-fluid
+    .row
+        .col-md-6
+            button.btn.btn-primary.btn-sm(href="?module=mobix#!/testeUsuario")
+                i.fa.fa-arrow-left
+                |  Voltar
+        .col-md-6.text-right
+            button.btn.btn-primary.btn-sm(href="?module=mobix#!/home")
+                i.fa.fa-sign-out
+                |  Finalizar Atendimento
+
+    .row
+        .col-md-12
+            .panel.panel-default
+                .panel-heading
+                        b
+                            | Testes do Serviço
+                .panel-body
+                    md-content
+                        md-tabs.md-dynamic-height.md-border-bottom
+                            md-tab(label="Fase1")
+
+                                md-content.md-padding
+                                    .row
+                                        .col-md-4
+                                            .panel.panel-success 
+                                                .panel-heading
+                                                    i.fa.fa-check-square 
+                                                    |  OLT
+                                                .panel-body
+                                                    p   
+                                                        | OLT: -
+                                                    p
+                                                        | Status: Up
+                                                    p
+                                                        | Quantidade de ONUs: -
+                                        .col-md-4
+                                            .panel.panel-warning 
+                                                .panel-heading
+                                                    i.fa.fa-exclamation-triangle 
+                                                    |  ONU
+                                                .panel-body
+                                                    p   
+                                                        | Consulta ONU: -
+                                                    p
+                                                        | Status: Down
+                                                    p
+                                                        | Potência ONU: -
+                                        .col-md-4
+                                            .panel.panel-danger
+                                                .panel-heading
+                                                    i.fa.fa.fa-times-circle 
+                                                    |  PPoE
+                                                .panel-body
+                                                    p   
+                                                        | Autenticação: PPoE
+                                                    p
+                                                        | Autenticado 
+                                                        i.fa.fa-times 
+                                                    p
+                                                        | 
+                                .col-md-12.text-right
+                                    button.btn.btn-primary.btn-sm(href="?module=mobix#!/testeUsuario")
+                                        i.fa.fa-retweet
+                                        |  Atualizar
+
+                            md-tab(label="Fase2")
+                                md-content(class="md-padding")
+                                    .row
+                                        .col-md-4
+                                            .panel.panel-success 
+                                                .panel-heading
+                                                    i.fa.fa-check-square 
+                                                    |  Velocidade
+                                                .panel-body
+                                                    p   
+                                                        | Ping: 300 ms
+                                                    p
+                                                        | Latência: 100 ms
+                                                    p
+                                                        | Perda de Pacotes: 4 pacotes
+                                        .col-md-4
+                                            .panel.panel-warning 
+                                                .panel-heading
+                                                    i.fa.fa-exclamation-triangle 
+                                                    |  ONU
+                                                .panel-body
+                                                    p   
+                                                        | ONU: -
+                                                    p
+                                                        | Aparelhos Conectados: 5
+                                                    p
+                                                        | 
+                                        .col-md-4
+                                            .panel.panel-danger
+                                                .panel-heading
+                                                    i.fa.fa.fa-times-circle
+                                                    |  PPoE
+                                                .panel-body
+                                                    p
+                                                        | Usuário: teste
+                                                    p
+                                                        | Senha: 123456
+                                    .row
+                                        .col-md-4.col-md-offset-2
+                                            .panel.panel-warning 
+                                                .panel-heading
+                                                    i.fa.fa-exclamation-triangle 
+                                                    |  Teste de Velocidade
+                                                .panel-body
+                                                    p
+                                                        | -
+                                                    p
+                                                        | -
+                                        .col-md-4
+                                            .panel.panel-danger
+                                                .panel-heading
+                                                    i.fa.fa.fa-times-circle
+                                                    |  Potifólio
+                                                .panel-body
+                                                    p
+                                                        | Velocidade contratada: 10 Mb
+                                                    p
+                                                        | Velocidade Ativa: 5 Mb
+
+                                .col-md-12(id="popupContainer")
+                                    span.btn-tab-mobix
+                                        md-button.btn.btn-primary.btn-sm(href="?module=mobix#!/testeUsuario")
+                                            i.fa.fa-retweet
+                                            |  Atualizar
+                                    span.btn-tab-mobix  
+                                        md-button.btn.btn-primary.btn-sm(href="?module=mobix#!/testeUsuario")
+                                            i.fa.fa-retweet
+                                            |  Facilidades
+                                    span.btn-tab-mobix
+                                        md-button.btn.btn-primary.btn-sm(href="?module=mobix#!/testeUsuario")
+                                            i.fa.fa-edit
+                                            |  Alterar SSID
+                                    span.btn-tab-mobix
+                                        md-button.btn.btn-primary.btn-sm(href="?module=mobix#!/testeUsuario")
+                                            i.fa.fa-edit
+                                            |  Alterar Senha
+                                    span.btn-tab-mobix
+                                        md-button.btn.btn-primary.btn-sm(ng-click="showAdvanced($event)")
+                                            i.fa.fa-wrench
+                                            |  Reboot do Aparelho
+
+md-dialog(aria-label="Mango (Fruit)")
+    span
+        | teste

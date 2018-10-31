@@ -5,6 +5,7 @@
                 .panel-heading
                     b
                         | Mobix 
+                    | - Sistema de Apoio aos Atendentes de Suporte
                 .panel-body
                     .row
                         .col-lg-8.col-lg-offset-2
@@ -12,7 +13,7 @@
                                 .input-group
                                     input.form-control(type="text" placeholder="ID, Nome, E-mail ou CPF/CNPJ" ng-model="vm.search")
                                     .input-group-btn
-                                        button.btn.btn-default(type="button" ng-click="vm.search = '';vm.pesquisarCliente()")
+                                        button.btn.btn-default(type="button" ng-click="vm.search = '';")
                                             i.fa.fa-times
                                         button.btn.btn-primary(type="button" ng-click="vm.pesquisarCliente()")
                                             i.fa.fa-search

@@ -88,6 +88,10 @@ gulp.task("coletorjs", function () {
         libs + "jquery.maskedinput/dist/jquery.maskedinput.min.js",
         libs + "eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js",
         libs + 'angular-ui-mask/dist/mask.min.js',
+        libs + 'angular-aria/angular-aria.js',
+        libs + 'angular-animate/angular-animate.js',
+        libs + 'angular-messages/angular-messages.js',
+        libs + 'angular-material/angular-material.js',
         tmp + "**/*.js"
     ])
         // .pipe(debug({title: "coletorjs:"}))
@@ -115,6 +119,7 @@ gulp.task("coletorcss", function () {
             libs + "angucomplete-alt/angucomplete-alt.css",
             libs + "ng-tags-input/ng-tags-input.css",
             libs + "ng-tags-input/ng-tags-input.bootstrap.css",
+            libs + "angular-material/angular-material.css",
             tmp + "**/*.css"
         ])
         // .pipe(debug({title: "coletorcss:"}))

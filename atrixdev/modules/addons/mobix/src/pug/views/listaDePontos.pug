@@ -1,0 +1,99 @@
+.container-fluid(ng-app="sortApp")
+    .row
+        .col-md-6
+            button.btn.btn-primary.btn-sm(href="?module=mobix#!/testeUsuario")
+                i.fa.fa-arrow-left
+                |  Voltar
+        .col-md-6.text-right
+            button.btn.btn-primary.btn-sm(href="?module=mobix#!/home")
+                i.fa.fa-sign-out
+                |  Finalizar Atendimento
+                
+    .row
+        .col-md-8
+            .panel.panel-default
+                .panel-heading
+                        b
+                            | Serviços
+                .panel-body
+                    .form-group
+                        .input-group
+                            input.form-control(type="text" placeholder="Filtrar serviços do cliente" ng-model="vm.filtroServico")
+                            .input-group-btn
+                                button.btn.btn-default(type="button" ng-click="")
+                                    i.fa.fa-search
+
+                    table.table.table-striped.table-bordered.table-hover    
+                        thead
+                            tr
+                                th(width="150px") 
+                                    a(ui-sref="#" ng-click="vm.ordenarServico = 'servico'; vm.ordenarServicoReverter =! vm.ordenarServicoReverter;")
+                                        | Serviço 
+                                        span(ng-show="vm.ordenarServico == 'servico' && !vm.ordenarServicoReverter" class="fa fa-caret-down")
+                                        span(ng-show="vm.ordenarServico == 'servico' && vm.ordenarServicoReverter" class="fa fa-caret-up")
+                                    
+
+                                th(width="") 
+                                    a(ui-sref="#" ng-click="vm.ordenarServico = 'endereco'; vm.ordenarServicoReverter =! vm.ordenarServicoReverter;")
+                                        | Endereço 
+                                        span(ng-show="vm.ordenarServico == 'endereco' && !vm.ordenarServicoReverter" class="fa fa-caret-down")
+                                        span(ng-show="vm.ordenarServico == 'endereco' && vm.ordenarServicoReverter" class="fa fa-caret-up")                               
+
+                                th(width="80px") 
+                                    a(ui-sref="#" ng-click="vm.ordenarServico = 'status'; vm.ordenarServicoReverter =! vm.ordenarServicoReverter;")
+                                        | Status 
+                                        span(ng-show="vm.ordenarServico == 'status' && !vm.ordenarServicoReverter" class="fa fa-caret-down")
+                                        span(ng-show="vm.ordenarServico == 'status' && vm.ordenarServicoReverter" class="fa fa-caret-up")
+
+                                th(width="80px") 
+                                    a(ui-sref="#")
+                                        | Ações
+                                    
+                        tbody
+                            tr(ng-repeat="servico in vm.servicos | filter: vm.filtroServico | orderBy:vm.ordenarServico:vm.ordenarServicoReverter")
+                                td {{servico.servico}}
+                                td {{servico.endereco}}
+                                td {{servico.status}}
+                                td 
+                                    a.btn.btn-primary.btn-xs(href="?module=mobix#!/testeUsuario")
+                                        | Consultar
+                                              
+        .col-md-4
+            .panel.panel-default
+                .panel-heading
+                        b
+                            | Protocolos de Atendimento
+                .panel-body
+                    .form-group
+                        .input-group
+                            input.form-control(type="text" placeholder="Filtrar protocolos do cliente" ng-model="vm.filtroProtocolo")
+                            .input-group-btn
+                                button.btn.btn-default(type="button" ng-click="")
+                                    i.fa.fa-search
+
+                    table.table.table-striped.table-bordered.table-hover
+                        thead
+                            tr
+                                th(width="110px") 
+                                    a(ui-sref="#" ng-click="vm.ordenarProtocolo = 'data'; vm.ordenarProtocoloReverter =! vm.ordenarProtocoloReverter;")
+                                        | Data 
+                                        span(ng-show="vm.ordenarProtocolo == 'data' && !vm.ordenarProtocoloReverter" class="fa fa-caret-down")
+                                        span(ng-show="vm.ordenarProtocolo == 'data' && vm.ordenarProtocoloReverter" class="fa fa-caret-up")
+
+                                th(width="") 
+                                    a(ui-sref="#" ng-click="vm.ordenarProtocolo = 'protocolo'; vm.ordenarProtocoloReverter =! vm.ordenarProtocoloReverter;")
+                                        | Protocolo 
+                                        span(ng-show="vm.ordenarProtocolo == 'protocolo' && !vm.ordenarProtocoloReverter" class="fa fa-caret-down")
+                                        span(ng-show="vm.ordenarProtocolo == 'protocolo' && vm.ordenarProtocoloReverter" class="fa fa-caret-up")                               
+
+                                th(width="80px") 
+                                    a(ui-sref="#")
+                                        | Ações
+                        tbody
+                            tr(ng-repeat="protocolo in vm.protocolos | filter: vm.filtroProtocolo | orderBy:vm.ordenarProtocolo:vm.ordenarProtocoloReverter")
+                                td {{protocolo.data}}
+                                td {{protocolo.protocolo}}
+                                td 
+                                    a.btn.btn-primary.btn-xs(href="?module=mobix#!/testeUsuario")
+                                        | Consultar
+    
