@@ -9,38 +9,38 @@
 
         vm.showFacilidades = function(ev) {
             $mdDialog.show({
-                controller: ["$mdDialog", facilidadesController],
+                controller: ["$mdDialog", modalsController],
                 template: window.faciliadadesModal,
                 parent: angular.element(document.body),
                 targetEvent: ev,
                 clickOutsideToClose:true,
-                fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
+                fullscreen: vm.customFullscreen
             });
         };
 
         vm.showSSID = function(ev) {
             $mdDialog.show({
-                controller: ["$mdDialog", SSIDController],
+                controller: ["$mdDialog", modalsController],
                 template: window.SSIDModal,
                 parent: angular.element(document.body),
                 targetEvent: ev,
                 clickOutsideToClose:true,
-                fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
+                fullscreen: vm.customFullscreen
             });
         };
 
-        function SSIDController($ssid) { 
+        function modalsController($modal) { 
  
             vm.hide = function() { 
-                $ssid.hide();
+                $modal.hide();
             };
 
             vm.cancel = function() {
-                $ssid.cancel();
+                $modal.cancel();
             }; 
 
             vm.answer = function(answer) { 
-                $ssid.hide(answer);
+                $modal.hide(answer);
             };
         }
         
