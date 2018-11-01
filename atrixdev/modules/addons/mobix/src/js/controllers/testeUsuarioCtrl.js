@@ -1,33 +1,46 @@
 (function () {
 
-    angular.module("modulo_mobix").controller("testeUsuarioCtrl", ["CONFIG", function (CONFIG) {
+    angular.module("modulo_mobix").controller("testeUsuarioCtrl", ["CONFIG", "$mdDialog", function (CONFIG, $mdDialog) {
 
         var vm = this;
 
+        vm.enderecoModals = "views/modals/testeUsuario/";
         vm.customFullscreen = false;
 
-        vm.showAdvanced = function(ev) {
+        vm.showFacilidades = function(ev) {
             $mdDialog.show({
-                controller: DialogController,
-                templateUrl: 'teste',
+                controller: ["$mdDialog", facilidadesController],
+                template: window.faciliadadesModal,
                 parent: angular.element(document.body),
                 targetEvent: ev,
                 clickOutsideToClose:true,
                 fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
-            })
+            });
         };
 
-        function DialogController($mdDialog) {
-            vm.hide = function() {
-                $mdDialog.hide();
+        vm.showSSID = function(ev) {
+            $mdDialog.show({
+                controller: ["$mdDialog", SSIDController],
+                template: window.SSIDModal,
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose:true,
+                fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
+            });
+        };
+
+        function SSIDController($ssid) { 
+ 
+            vm.hide = function() { 
+                $ssid.hide();
             };
 
             vm.cancel = function() {
-                $mdDialog.cancel();
-            };
+                $ssid.cancel();
+            }; 
 
-            vm.answer = function(answer) {
-                $mdDialog.hide(answer);
+            vm.answer = function(answer) { 
+                $ssid.hide(answer);
             };
         }
         

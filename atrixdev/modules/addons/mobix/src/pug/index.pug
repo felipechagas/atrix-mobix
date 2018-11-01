@@ -9,5 +9,6 @@ link(href=url + "/css/style_modulo_mobix.min.css?v=" + version, rel="stylesheet"
 script(src=url + "/js/app_modulo_mobix.min.js?v=" + version)
 
 div(ng-app="modulo_mobix")
+    include ./includes/modals.pug
     include ./includes/menu.pug
     div(ui-view="conteudo")

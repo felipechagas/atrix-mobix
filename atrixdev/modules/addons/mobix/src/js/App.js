@@ -10,7 +10,7 @@
 
     angular.module("modulo_mobix").config(["$stateProvider", "$urlRouterProvider", "CONFIG", function ($stateProvider, $urlRouterProvider, CONFIG) {
 
-        $urlRouterProvider.otherwise("home"); 
+        $urlRouterProvider.otherwise("home");
 
         $stateProvider
 

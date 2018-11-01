@@ -39,7 +39,7 @@ gulp.task("pug", function () {
         .pipe(pug())
         .pipe(gulp.dest(dist));
 
-    gulp.src(path_pug + "views/*.pug")
+    gulp.src(path_pug + "views/**/*.pug")
         .pipe(pug())
         .pipe(gulp.dest(dist + "views/"));
 

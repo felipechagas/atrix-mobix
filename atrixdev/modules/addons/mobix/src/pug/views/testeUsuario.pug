@@ -129,11 +129,11 @@
                                             i.fa.fa-retweet
                                             |  Atualizar
                                     span.btn-tab-mobix  
-                                        md-button.btn.btn-primary.btn-sm(href="?module=mobix#!/testeUsuario")
+                                        md-button.btn.btn-primary.btn-sm(ng-click="vm.showFacilidades($event)")
                                             i.fa.fa-retweet
                                             |  Facilidades
                                     span.btn-tab-mobix
-                                        md-button.btn.btn-primary.btn-sm(href="?module=mobix#!/testeUsuario")
+                                        md-button.btn.btn-primary.btn-sm(ng-click="vm.showSSID($event))
                                             i.fa.fa-edit
                                             |  Alterar SSID
                                     span.btn-tab-mobix
@@ -141,10 +141,6 @@
                                             i.fa.fa-edit
                                             |  Alterar Senha
                                     span.btn-tab-mobix
-                                        md-button.btn.btn-primary.btn-sm(ng-click="showAdvanced($event)")
+                                        md-button.btn.btn-primary.btn-sm(ng-click="vm.showAdvanced($event)")
                                             i.fa.fa-wrench
                                             |  Reboot do Aparelho
-
-md-dialog(aria-label="Mango (Fruit)")
-    span
-        | teste
