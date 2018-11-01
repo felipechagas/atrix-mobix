@@ -1,7 +1,12 @@
 md-dialog        
-        md-toolbar
+        md-toolbar.top-modal
             .md-toolbar-tools.titulo-modal
                 | Alterar SSID
+
+                span(flex)
+
+                md-button.md-icon-button(ng-click="cancel()" aria-label="Close dialog")
+                    i.fa.fa-times 
 
         md-dialog-content
             .md-dialog-content
@@ -15,4 +20,4 @@ md-dialog
                             | Editar
 
                         button.btn.btn-primary.btn-modal-linear
-                            | Enviar por e-mail
+                            | Enviar por e-mail 

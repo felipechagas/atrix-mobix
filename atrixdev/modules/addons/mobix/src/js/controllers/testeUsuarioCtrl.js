@@ -4,6 +4,8 @@
 
         var vm = this;
 
+        
+
         vm.enderecoModals = "views/modals/testeUsuario/";
         vm.customFullscreen = false;
 
@@ -29,18 +31,17 @@
             });
         };
 
-        function modalsController($modal) { 
- 
+        function modalsController($mdDialog) { 
             vm.hide = function() { 
-                $modal.hide();
+                $mdDialog.hide();
             };
 
             vm.cancel = function() {
-                $modal.cancel();
+                $mdDialog.cancel();
             }; 
 
             vm.answer = function(answer) { 
-                $modal.hide(answer);
+                $mdDialog.hide(answer);
             };
         }
         
