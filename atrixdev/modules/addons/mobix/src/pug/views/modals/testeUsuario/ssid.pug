@@ -1,13 +1,18 @@
-md-dialog
-    
-    md-dialog-content
-        form.form-inline
+md-dialog        
+        md-toolbar
+            .md-toolbar-tools.titulo-modal
+                | Alterar SSID
+
+        md-dialog-content
             .md-dialog-content
-                
+                form.form-inline
                     .form-group
                         label(for="email")
-                            | Email addres:
-                        input.form-control(type="email" id="email")
+                            | Email addres:  
+                        input.form-control.input-modal-linear(type="email" id="email" placeholder="Digitar nome da Rede")
                     
-                    button.btn.btn-primary
-                        | Submit
+                        button.btn.btn-primary.btn-modal-linear
+                            | Editar
+
+                        button.btn.btn-primary.btn-modal-linear
+                            | Enviar por e-mail
